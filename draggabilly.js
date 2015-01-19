@@ -30,10 +30,10 @@ var defView = document.defaultView;
 
 var getStyle = defView && defView.getComputedStyle ?
   function( elem ) {
-    return defView.getComputedStyle( elem, null );
+    return defView.getComputedStyle( elem, null ) || {};
   } :
   function( elem ) {
-    return elem.currentStyle;
+    return elem.currentStyle || {};
   };
 
 
@@ -243,8 +243,8 @@ Draggabilly.prototype._addTransformPosition = function( style ) {
     return;
   }
   var transform = style[ transformProperty ];
-  // bail out if value is 'none'
-  if ( transform.indexOf('matrix') !== 0 ) {
+  // bail out if value is 'none' or isn’t defined
+  if ( !transform || transform.indexOf('matrix') !== 0 ) {
     return;
   }
   // split matrix(1, 0, 0, 1, x, y)
