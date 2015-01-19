@@ -5,10 +5,10 @@
   "main": "draggabilly.js",
   "dependencies": {
     "desandro-classie": "^1",
-    "wolfy87-eventemitter": ">=3 <5",
+    "desandro-get-style-property": "^1",
     "eventie": "^1",
-    "get-size": "^1.1.8",
-    "desandro-get-style-property": "^1"
+    "get-size": "https://github.com/Kl0tl/get-size/tarball/fix/firefox-bug-hidden-iframes",
+    "wolfy87-eventemitter": ">=3 <5"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

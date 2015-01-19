@@ -7,8 +7,8 @@
     "classie": "^1",
     "eventEmitter": ">=3 <5",
     "eventie": "^1",
-    "get-size": "^1.1.8",
-    "get-style-property": "^1"
+    "get-style-property": "^1",
+    "get-size": "Kl0tl/get-size#fix/firefox-bug-hidden-iframes"
   },
   "ignore": [
     "**/.*",

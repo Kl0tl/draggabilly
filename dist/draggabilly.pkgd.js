@@ -805,7 +805,7 @@ function setup() {
             '. Are you running this code in a hidden iframe on Firefox? ' +
             'See http://bit.ly/getsizebug1' );
         }
-        return style;
+        return style || {};
       };
   })();
 
@@ -853,7 +853,7 @@ function getSize( elem ) {
   var style = getStyle( elem );
 
   // if hidden, everything is 0
-  if ( style.display === 'none' ) {
+  if ( !style.display || style.display === 'none' ) {
     return getZeroSize();
   }
 
